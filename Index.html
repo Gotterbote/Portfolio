@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/2b1a86a7d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo1.png" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Aspiring Developer</p>
+            <h1>Hi, I'm <span>Timmy Bell</span><br>&emsp;&emsp;from <span>Nebraska.</span></h1>
+        </div>
+    </div>
+</div>
+<!-- ----------------about------------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/tim.jpg" height="600" alt ="">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eius ratione illum doloremque ducimus omnis architecto labore quos voluptate libero autem, alias provident dolorum facilis ipsa quo veniam itaque exercitationem, odit asperiores. Repellendus iusto reprehenderit a, vero cum molestias perspiciatis dolore rem qui, officia sunt iste, animi nihil!</p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>Python programming</span><br>Drone programming/Precision landing</li>
+                    <li><span>Video Editing</span><br>Edit on-line curriculum videos</li>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>   
+                    <li><span>Central Community COllege</span><br>Workstudy 2021-2022</li>
+                    <li><span>Hornady Manufacturing</span><br>Process Supervisor 2007-Present</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Central Community COllege</span><br>Associate of Applied Science - Information Technology and Systems - Developer</li>
+                    <li>May 5, 2022</li>
+                    <li><span>Bellevue University</span><br>Bachelor of Science - Software Development</li>
+                    <li>January 31, 2024</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------------services------------------ -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eveniet unde consequuntur est reiciendis mollitia sequi natus quo laudantium molestiae?</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Database Administration</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eveniet unde consequuntur est reiciendis mollitia sequi natus quo laudantium molestiae?</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-uncharted"></i>
+                <h2>3D Printing</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit eveniet unde consequuntur est reiciendis mollitia sequi natus quo laudantium molestiae?</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------------services------------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/tim.jpg">
+                <div class="layer">
+                    <h3>Moffat Bay Website</h3>
+                    <p>Attached is a link to the video walkthrough for The Moffat Bay Lodge web app!.</p>
+                    <a href="images/AlphaMoffatWalkthrough.mp4"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/tim.jpg">
+                <div class="layer">
+                    <h3></h3>
+                    <p></p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/3dPrint.jpg">
+                <div class="layer">
+                    <h3></h3>
+                    <p></p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
